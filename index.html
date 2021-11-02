@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to create a slider with PURE CSS</title>
+        <style>
+            h1{
+                width: 40px;
+                height: 10%;
+                margin: auto;
+            }
+            body{
+                background-color: #333;
+                margin: 100px 0px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .sliderBox{
+                width: 1000px;
+                height: 200px;
+                overflow: hidden;
+                margin: auto;
+            }
+            .slider{
+                width: 20000px;
+                height: 200px;
+                margin: auto;
+                padding-left: 0px;
+                list-style: none;
+                animation-name: slider;
+                animation-duration: 10s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            .sliderBox:hover .slider{
+                animation-play-state: paused;
+            }
+            @keyframes slider {
+                0%{
+                    transform: translateX(0px);
+                }
+                19%{
+                    transform: translateX(0px);
+                }
+                20%{
+                    transform: translateX(-1000px);
+                }
+                39%{
+                    transform: translateX(-1000px);
+                }
+                40%{
+                    transform: translateX(-2000px);
+                }
+                59%{
+                    transform: translateX(-2000px);
+                }
+                60%{
+                    transform: translateX(-3000px);
+                }
+                79%{
+                    transform: translateX(-3000px);
+                }
+                80%{
+                    transform: translateX(-4000px);
+                }
+                99%{
+                    transform: translateX(-4000px);   
+                }
+                100%{
+                    transform: translateX(-5000px);
+                }
+            }
+            .slider > li{
+                float: left;
+                width: 1000px;
+                height: 100%;
+            }
+            .slider > li > a{
+               color:white;
+               display: block;
+               text-align: center;
+               line-height: 200px;
+               font-size: 4em;
+               height: 100%;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 >Nature</h1>
+        <div class="sliderBox">
+            <ul class="slider">
+                <li>
+                    <a href="#">
+                        <img src="./img/download.jpg">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <img src="./img/images.jpg">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <img src="./img/images (1).jpg">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <img src="img/images (2).jpg">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <img src="./img/images (3).jpg">
+                    </a>
+                </li> 
+            </ul>
+        </div>
+    </body>
+</html>
